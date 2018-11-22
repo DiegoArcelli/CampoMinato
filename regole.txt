@@ -1,0 +1,6 @@
+Regole del gioco:
+- Clicca su una casella per scoprire le celle adiacenti. Verrano scoperte solo le celle che non contengono bombe
+- Hai a disposizione 3 vite. Ogni volta che selezioni una casella che nasconde una bomba perdi una vita
+- Il gioco termina quando hai perso tutte e tre le vite
+- Ogni volta che scopri una casella che non contiene bombe il punteggio incrementa
+- L'obiettivo del gioco è realizzare il punteggio più alto possibile
