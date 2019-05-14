@@ -7,15 +7,15 @@ public class Campo {
     int vita=3;
     
     public Campo(){
-        mat = new int[20][20];
+        mat = new int[15][15];
     }
     
     public void generaCampo(){
         
         int cella;
         
-        for(int i=0;i<20;i++){
-            for(int j=0;j<20;j++){
+        for(int i=0;i<15;i++){
+            for(int j=0;j<15;j++){
                 cella = (int) (Math.random() * 6);
                 if(cella == 4){
                     mat[i][j]=1;
@@ -36,7 +36,7 @@ public class Campo {
     public void controllaCelleAdiacenti(int i, int j){
         for(int x=i-1;x<i+2;x++){
             for(int y=j-1;y<j+2;y++){
-                if(x>=0 && y>=0 && x<=19 && y<=19){
+                if(x>=0 && y>=0 && x<=14 && y<=14){
                     if(mat[x][y]==0){
                         mat[x][y]=2;
                     }
@@ -50,7 +50,7 @@ public class Campo {
         int count=0;
         for(int x=i-1;x<i+2;x++){
             for(int y=j-1;y<j+2;y++){
-                if(x>=0 && y>=0 && x<=19 && y<=19){
+                if(x>=0 && y>=0 && x<=14 && y<=14){
                     if(mat[x][y]==1){
                         count++;
                     }
@@ -62,8 +62,8 @@ public class Campo {
     
     public int calcolaPunteggio(){
         int punti=0;
-        for(int i=0;i<20;i++){
-            for(int j=0;j<20;j++){
+        for(int i=0;i<15;i++){
+            for(int j=0;j<15;j++){
                 if(mat[i][j]==2){
                     punti+=5;
                 }

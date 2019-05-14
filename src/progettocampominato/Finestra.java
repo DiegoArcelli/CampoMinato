@@ -60,7 +60,7 @@ public class Finestra extends JFrame implements ActionListener {
         if(mat.getCella(i,j)==0){
             for(int x=i-1;x<i+2;x++){
                 for(int y=j-1;y<j+2;y++){
-                    if(x>=0 && y>=0 && x<=19 && y<=19){
+                    if(x>=0 && y>=0 && x<=14 && y<=14){
                         if(mat.getCella(x,y)==0){
                             //b[x][y].setIcon(new ImageIcon("./ics.png"));
                             b[x][y].setText(Integer.toString(mat.contaBombeAdiacenti(x, y)));
@@ -81,8 +81,8 @@ public class Finestra extends JFrame implements ActionListener {
             if(mat.getVita()==0){
                 JOptionPane.showMessageDialog(null,"Punteggio: " + score,"Game Over",JOptionPane. INFORMATION_MESSAGE);
                 mat.generaCampo();
-                for(int x=0;x<20;x++){
-                    for(int y=0;y<20;y++){
+                for(int x=0;x<15;x++){
+                    for(int y=0;y<15;y++){
                         b[x][y].setIcon(null);
                         score=0;
                         mat.ricaricaVita();

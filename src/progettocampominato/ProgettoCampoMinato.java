@@ -21,7 +21,7 @@ public class ProgettoCampoMinato {
         f.setLocation(300,300);
         f.setTitle("Campo Minato");
         f.setVisible(true);
-        //f.setResizable(false);
+        f.setResizable(false);
         f.setDefaultCloseOperation(f.EXIT_ON_CLOSE);   
         
     }
