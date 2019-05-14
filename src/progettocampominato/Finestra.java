@@ -83,6 +83,7 @@ public class Finestra extends JFrame implements ActionListener {
                 mat.generaCampo();
                 for(int x=0;x<15;x++){
                     for(int y=0;y<15;y++){
+                        b[x][y].setText(null);
                         b[x][y].setIcon(null);
                         score=0;
                         mat.ricaricaVita();
