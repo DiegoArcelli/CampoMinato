@@ -8,8 +8,8 @@ public class Finestra extends JFrame implements ActionListener {
 
     Container c;
     JPanel p,info,info1,info2;
-    JButton b[][] = new JButton[20][20];
-    GridLayout gl = new GridLayout(20,20);
+    JButton b[][] = new JButton[15][15];
+    GridLayout gl = new GridLayout(15,15);
     Campo mat;
     JLabel vite,punti;
     int boost,score;
@@ -33,9 +33,10 @@ public class Finestra extends JFrame implements ActionListener {
         info2.add(punti);
         info.add(info1,BorderLayout.WEST);
         info.add(info2,BorderLayout.EAST);
-        for(int i=0;i<20;i++){
-            for(int j=0;j<20;j++){
+        for(int i=0;i<15;i++){
+            for(int j=0;j<15;j++){
                 b[i][j] = new JButton();
+                //b[i][j].setFont(new Font("Helvetica",Font.PLAIN,5));
                 p.add(b[i][j]);
                 b[i][j].addActionListener(this);
                 b[i][j].setActionCommand(Integer.toString(i) + " " + Integer.toString(j));                
@@ -61,7 +62,8 @@ public class Finestra extends JFrame implements ActionListener {
                 for(int y=j-1;y<j+2;y++){
                     if(x>=0 && y>=0 && x<=19 && y<=19){
                         if(mat.getCella(x,y)==0){
-                            b[x][y].setIcon(new ImageIcon("./ics.png"));
+                            //b[x][y].setIcon(new ImageIcon("./ics.png"));
+                            b[x][y].setText(Integer.toString(mat.contaBombeAdiacenti(x, y)));
                         }
                     }
                 }

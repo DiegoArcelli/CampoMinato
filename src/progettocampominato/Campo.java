@@ -16,7 +16,7 @@ public class Campo {
         
         for(int i=0;i<20;i++){
             for(int j=0;j<20;j++){
-                cella = (int) (Math.random() * 5);
+                cella = (int) (Math.random() * 6);
                 if(cella == 4){
                     mat[i][j]=1;
                 } else {
@@ -45,6 +45,20 @@ public class Campo {
             }
         }
     }
+    
+    public int contaBombeAdiacenti(int i, int j){
+        int count=0;
+        for(int x=i-1;x<i+2;x++){
+            for(int y=j-1;y<j+2;y++){
+                if(x>=0 && y>=0 && x<=19 && y<=19){
+                    if(mat[x][y]==1){
+                        count++;
+                    }
+                }
+            }
+        }
+        return count;
+    }    
     
     public int calcolaPunteggio(){
         int punti=0;

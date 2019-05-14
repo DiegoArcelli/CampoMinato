@@ -17,11 +17,11 @@ public class ProgettoCampoMinato {
     public static void main(String[] args) {
         // TODO code application logic here
         Finestra f = new Finestra();
-        f.setSize(500,530);
+        f.setSize(630,630);
         f.setLocation(300,300);
         f.setTitle("Campo Minato");
         f.setVisible(true);
-        f.setResizable(false);
+        //f.setResizable(false);
         f.setDefaultCloseOperation(f.EXIT_ON_CLOSE);   
         
     }
